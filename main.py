@@ -55,7 +55,6 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, HEIGHT / 2 - 40)
 pen.write(f"Player A: {score_a}  Player B: {score_b}", align="center", font=("Courier", 20, "normal"))
-# mom
 
 def paddle_a_up():
     y = paddle_a.ycor()
