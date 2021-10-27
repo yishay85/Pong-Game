@@ -1,5 +1,5 @@
 import turtle
-import tkinter
+
 HEIGHT = 600
 WIDTH = 800
 
@@ -13,7 +13,6 @@ win.title("Pong")  # כותרת
 win.bgcolor("black")  # צבע לרקע
 win.setup(width=WIDTH, height=HEIGHT)  # הגדרת גודל מסך
 win.tracer(0)  # מונע הקפאת מסך
-
 
 canvas = win.getcanvas()  # or, equivalently: turtle.getcanvas()
 root = canvas.winfo_toplevel()
@@ -56,6 +55,7 @@ pen.hideturtle()
 pen.goto(0, HEIGHT / 2 - 40)
 pen.write(f"Player A: {score_a}  Player B: {score_b}", align="center", font=("Courier", 20, "normal"))
 
+
 def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
@@ -84,8 +84,8 @@ def quit():
     global running
     running = False
 
-root.protocol("WM_DELETE_WINDOW", quit)
 
+root.protocol("WM_DELETE_WINDOW", quit)
 
 win.listen()
 win.onkeypress(paddle_a_up, "w")
@@ -135,4 +135,3 @@ while running:
         ball.dx *= -1
     if not running:
         break
-
